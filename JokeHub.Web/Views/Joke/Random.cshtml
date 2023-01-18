@@ -1,0 +1,12 @@
+﻿@model RandomJokeViewModel;
+
+@{
+    ViewData["Title"] = "Joke";
+}
+
+
+<partial name="../Shared/Components/_GoHome" />
+
+<p>@Model.Setup</p>
+<p>@Model.Punchline</p>
+<p>@Model.Category.Name</p>

@@ -1,0 +1,52 @@
+﻿@model IndexCategoryViewModel;
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+
+<partial name="../Shared/Components/_GoHome" />
+
+
+@if (Model.Categories.Count() < 1)
+{
+    <div class="text-center">
+        <h6 class="lead">No categories in database.</h6>
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+
+        <table class="table table-responsive table-responsive-md table-bordered caption-top">
+            <caption>List of categories - Total @Model.Categories.Count()</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Created at</th>
+                    <th scope="col">Joke count</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var joke in Model.Categories)
+                {
+                    <tr>
+                        <td>
+                            <small>@joke.Id</small>
+                        </td>
+                        <td>
+                            <small>@joke.Name</small>
+                        </td>
+                        <td>
+                            <small>@joke.CreatedAt</small>
+                        </td>
+                        <td>
+                            <small>@joke.JokeCount</small>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

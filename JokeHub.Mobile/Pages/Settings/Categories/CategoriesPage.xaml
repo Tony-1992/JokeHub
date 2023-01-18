@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:JokeHub.Mobile.ViewModels"
+             x:DataType="viewModels:CategoriesPageViewModel"
+             x:Class="JokeHub.Mobile.Pages.Settings.Categories.CategoriesPage"
+             Title="{Binding Title}">
+
+    <VerticalStackLayout Padding="10" Spacing="5">
+        <Label Grid.Row="0" Text="You can toggle different types of jokes below." />
+
+        <Grid ColumnDefinitions="*, *">
+            <Label Grid.Column="0" Text="Show dark jokes:" VerticalOptions="Center" />
+            <Switch Grid.Column="1" HorizontalOptions="Start" OnColor="{DynamicResource Primary}" ThumbColor="LightGray" IsToggled="{Binding ShowDarkJokes}"/>
+        </Grid>
+
+        <Grid ColumnDefinitions="*, *">
+            <Label Grid.Column="0" Text="Show Yo mama jokes:" VerticalOptions="Center" />
+            <Switch Grid.Column="1" HorizontalOptions="Start" OnColor="{DynamicResource Primary}" ThumbColor="LightGray" IsToggled="{Binding ShowYoMamaJokes}"/>
+        </Grid>
+
+        <Grid ColumnDefinitions="*, *">
+            <Label Grid.Column="0" Text="Show sexual jokes:" VerticalOptions="Center" />
+            <Switch Grid.Column="1" HorizontalOptions="Start" OnColor="{DynamicResource Primary}" ThumbColor="LightGray" IsToggled="{Binding ShowSexualJokes}"/>
+        </Grid>
+
+        <Button BackgroundColor="{DynamicResource Primary}" Command="{Binding UpdatePreferencesCommand}" VerticalOptions="End" Text="Update categories" />
+        <Label Text="Non-offensive jokes will be shown by default." FontSize="Caption" TextColor="Grey" />
+    </VerticalStackLayout>
+</ContentPage>

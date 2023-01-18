@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JokeHub.Mobile.Pages.Settings.Direction.SwipeDirectionPage"
+             xmlns:viewModel="clr-namespace:JokeHub.Mobile.ViewModels"
+             x:DataType="viewModel:SwipeDirectionPageViewModel"
+             Title="{Binding Title}">
+
+    <VerticalStackLayout Padding="10" Spacing="15">
+        <Label 
+            Text="Swipe direction refers to the swipe gesture you make to retreive a new joke on the main page."
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label Text="Choose your preferred swipe direction:" />
+        <Picker Title="Select swipe direction"
+                BackgroundColor="#FAFAFA"
+                CharacterSpacing="1.5"
+                TextColor="Grey"
+                ItemsSource="{Binding SwipeDirections}"
+                ItemDisplayBinding="{Binding Text}"
+                SelectedItem="{Binding SelectedSwipe}" />
+
+        <Button BackgroundColor="{DynamicResource Primary}" Command="{Binding UpdateSwipeDirectionCommand}" VerticalOptions="End" Text="Update swipe direction" />
+
+    </VerticalStackLayout>
+</ContentPage>

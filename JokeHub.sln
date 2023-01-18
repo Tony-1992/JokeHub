@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JokeHub.Web", "JokeHub.Web\JokeHub.Web.csproj", "{F2CD2AD0-52BA-40B7-B0FF-E875653F0D3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JokeHub.Core", "JokeHub.Core\JokeHub.Core.csproj", "{FFA10C9B-3368-4F4E-A027-E93CEB06B6D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JokeHub.Infrastructure", "JokeHub.Infrastructure\JokeHub.Infrastructure.csproj", "{8C61A491-A34F-4E0E-B2A0-91D348B40B07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLine", "CommandLine\CommandLine.csproj", "{BF7975C0-D6B6-45F1-8673-40DCC217E666}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JokeHub.Mobile", "JokeHub.Mobile\JokeHub.Mobile.csproj", "{ABDE3DD2-AADD-4802-9279-0AF7BC971A9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JokeHub.API", "JokeHub.API\JokeHub.API.csproj", "{1E541753-0B6F-41D3-BE46-FC2B496355A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2CD2AD0-52BA-40B7-B0FF-E875653F0D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2CD2AD0-52BA-40B7-B0FF-E875653F0D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2CD2AD0-52BA-40B7-B0FF-E875653F0D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2CD2AD0-52BA-40B7-B0FF-E875653F0D3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA10C9B-3368-4F4E-A027-E93CEB06B6D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA10C9B-3368-4F4E-A027-E93CEB06B6D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA10C9B-3368-4F4E-A027-E93CEB06B6D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA10C9B-3368-4F4E-A027-E93CEB06B6D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C61A491-A34F-4E0E-B2A0-91D348B40B07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C61A491-A34F-4E0E-B2A0-91D348B40B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C61A491-A34F-4E0E-B2A0-91D348B40B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C61A491-A34F-4E0E-B2A0-91D348B40B07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF7975C0-D6B6-45F1-8673-40DCC217E666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF7975C0-D6B6-45F1-8673-40DCC217E666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF7975C0-D6B6-45F1-8673-40DCC217E666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF7975C0-D6B6-45F1-8673-40DCC217E666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABDE3DD2-AADD-4802-9279-0AF7BC971A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDE3DD2-AADD-4802-9279-0AF7BC971A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDE3DD2-AADD-4802-9279-0AF7BC971A9B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ABDE3DD2-AADD-4802-9279-0AF7BC971A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDE3DD2-AADD-4802-9279-0AF7BC971A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABDE3DD2-AADD-4802-9279-0AF7BC971A9B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1E541753-0B6F-41D3-BE46-FC2B496355A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E541753-0B6F-41D3-BE46-FC2B496355A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E541753-0B6F-41D3-BE46-FC2B496355A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E541753-0B6F-41D3-BE46-FC2B496355A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FAA1230-2A8B-49AE-A8F9-250E20DA9AA0}
+	EndGlobalSection
+EndGlobal

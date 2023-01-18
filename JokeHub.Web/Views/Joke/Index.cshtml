@@ -1,0 +1,63 @@
+﻿@model IndexJokeViewModel;
+
+@{
+    ViewData["Title"] = "Jokes";
+}
+
+
+<partial name="../Shared/Components/_GoHome" />
+
+
+@if (Model.Jokes.Count() < 1)
+{
+    <div class="text-center">
+        <h6 class="lead">No jokes in database.</h6>
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+
+        <table class="table table-responsive table-responsive-md table-bordered caption-top">
+            <caption>List of jokes - Total @Model.Jokes.Count()</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Setup</th>
+                    <th scope="col">Punchline</th>
+                    <th scope="col">Created at</th>
+                    <th scope="col">Category</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var joke in Model.Jokes)
+                {
+                    <tr>
+                        <td>
+                            <small>@joke.Setup</small>
+                        </td>
+                        <td>
+                            <small>@joke.PunchLine</small>
+                        </td>
+                        <td>
+                            <small>@joke.CreatedAt</small>
+                        </td>
+                        <td>
+                            <small>@joke.Category.Name</small>
+                        </td>
+                        <td class="text-center">
+                            <div class="btn-group btn-group-sm" role="group">
+                                <form method="get" asp-controller="Joke" asp-action="edit" asp-route-id="@joke.Id">
+                                    <button type="submit" class="btn btn-sm btn-outline-primary">Update</button>
+                                </form>
+                                <form method="post" asp-controller="Joke" asp-action="delete" asp-route-id="@joke.Id">
+                                    <button type="submit" class="btn btn-sm btn-outline-primary">Delete</button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

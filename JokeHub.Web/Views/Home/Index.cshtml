@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center pb-2">
+    <h6 class="display-5">JokeHub admin</h6>
+</div>
+
+
+<div class="container">
+    <div class="row g-4">
+        <div class="col-sm-12 col-md-6">
+            <ul class="list-group">
+                <a asp-controller="Category" asp-action="Create" class="list-group-item list-group-item-action">
+                    Create category
+                </a>
+                <a asp-controller="Joke" asp-action="Create" class="list-group-item list-group-item-action">
+                    Create joke
+                </a>
+            </ul>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <ul class="list-group">
+                <a asp-controller="Category" asp-action="Index" class="list-group-item list-group-item-action">
+                    Show all categories
+                </a>
+                <a asp-controller="Joke" asp-action="Index" class="list-group-item list-group-item-action">
+                    Show all jokes
+                </a>
+                <a asp-controller="Joke" asp-action="Random" class="list-group-item list-group-item-action">
+                    Get random joke
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>

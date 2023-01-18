@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:JokeHub.Mobile.ViewModels"
+             x:DataType="viewModels:SettingsPageViewModel"
+             x:Class="JokeHub.Mobile.Pages.SettingsPage"
+             Shell.NavBarIsVisible="False"
+             Title="{Binding Title}">
+
+    <ScrollView>
+
+        <VerticalStackLayout Padding="10" Spacing="6">
+            <Frame BackgroundColor="#FAFAFA" BorderColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapSwipeDirectionCommand}" />
+                </Frame.GestureRecognizers>
+                <Grid ColumnDefinitions="14, *, 8" ColumnSpacing="10">
+                    <Image Source="point_left.svg" Aspect="AspectFit"/>
+                    <Label Text="Swipe direction" FontSize="Small" Grid.Column="1" />
+                    <Image Source="chevron_right.svg" Grid.Column="2" />
+                </Grid>
+            </Frame>
+
+            <Frame BackgroundColor="#FAFAFA" BorderColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCategoriesCommand}" />
+                </Frame.GestureRecognizers>
+                <Grid ColumnDefinitions="14, *, 8" ColumnSpacing="10">
+                    <Image Source="sliders.svg" Aspect="AspectFit"/>
+                    <Label Text="Joke categories" FontSize="Small" Grid.Column="1" />
+                    <Image Source="chevron_right.svg" Grid.Column="2" />
+                </Grid>
+            </Frame>
+
+            <Frame BackgroundColor="#FAFAFA" BorderColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCategoriesCommand}" />
+                </Frame.GestureRecognizers>
+                <Grid ColumnDefinitions="14, *, 8" ColumnSpacing="10">
+                    <Image Source="plus.svg" Aspect="AspectFit"/>
+                    <Label Text="Add your own joke" FontSize="Small" Grid.Column="1" />
+                    <Image Source="chevron_right.svg" Grid.Column="2" />
+                </Grid>
+            </Frame>
+
+
+
+            <Grid ColumnDefinitions="130, *">
+                <Label Text="Current version" TextColor="Grey" />
+                <Label Text="{Binding DisplayAppVersion}" Grid.Column="1" TextColor="Grey" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
